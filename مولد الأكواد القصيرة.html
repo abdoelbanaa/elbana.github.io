@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html dir=rtl>
+<head>
+<title>مصمم النماذج</title>
+<meta http-equiv=content-type charset=utf-8>
+<style>body,p{margin:0;font-size:100%;font-family:Arial}span{font-family:inherit}h1,h2,h3,h4,h5,h6{margin:0;font-size:100%;font-weight:normal;font-family:inherit}a{margin:0;padding:0;text-decoration:none;font-family:inherit}ul,li,ol{margin:0;padding:0;list-style:none;font-family:inherit}input,textarea{outline:0;border:0;background:0;font-family:inherit}img{border:0;max-width:100%}abbr{border:none!important;outline:none!important;text-decoration:none!important}*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}.clear{clear:both;display:block}select{font-family:inherit}option{color:#000}body{background-color:#ddd;font-family:Segoe UI Semibold!important}h1{font-size:30px;font-weight:bold;text-align:center;margin-bottom:20px;border-bottom:1px solid #EEE;padding-bottom:20px}h2{text-align:center;font-size:35px;padding:5px 0;margin:0 auto 20px auto;color:#999;border:2px solid #eee;border-radius:100px}h3{display:inline-block;vertical-align:middle;margin:0 10px;font-size:19px;color:#CCC}h4 b{font-family:CURSIVE;border-radius:100%;background-color:#9e2f5e;width:40px;height:40px;color:#FFF;display:inline-block;vertical-align:2px;margin-left:15px;font-weight:normal;text-align:center;font-size:26px}h4{font-size:30px;display:block;color:#bbb;margin:30px 0}select{padding:5px 10px;border:1px solid #EEE;color:#999;font-size:14px}textarea{resize:vertical}.bottons-container,.accordion-container,.slider-container,.msgs-container{width:660px;margin:100px auto;background-color:#FFF;padding:30px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.05)}.normal-input{border:1px solid #EEE;padding:10px;display:inline-block;vertical-align:middle}.bottons-container .normal-input{width:200px}.buttons-generate,.msgs-generate{background-color:#9e2f5e;border-radius:3px;color:#FFF;font-weight:bold;font-size:20px;padding:10px 20px;cursor:pointer;display:inline-block;vertical-align:top}.buttons-generate:hover,.msgs-generate:hover{background-color:#242135}.buttons-code,.msgs-code{width:440px;height:50px;display:inline-block;vertical-align:top;margin-right:20px;border-radius:5px;background-color:#fff;border:1px solid #eee;color:#999;direction:ltr;padding:15px 20px;cursor:text;font-size:12px;font-family:cursive}.color-select{border-radius:100%;width:40px;height:40px;overflow:hidden;border:3px solid #EEE;display:inline-block;vertical-align:middle}.normal-color{height:70px;width:70px;cursor:pointer;margin:-8px -8px}.accordion-container .normal-input{display:block;vertical-align:top;width:100%}.accordion-container h3{display:block;margin-bottom:10px}.accordion-container h3{display:block;margin-bottom:10px}.a-content{height:120px}.accordion-add,.slide-add{background-color:#9e2f5e;border-radius:3px;color:#FFF;font-weight:bold;font-size:20px;padding:10px 0;cursor:pointer;display:block;vertical-align:top;margin:0 auto;text-align:center;width:150px}.accordion-add:hover,.slide-add:hover{background-color:#242135}.a-item{margin-bottom:10px;padding:20px;border-radius:5px;border:1px solid #eee;text-align:center}.a-item-title{display:block;width:100%;padding:10px;color:#999;font-size:18px;font-weight:bold;border-bottom:1px solid #EEE}.acc-d .a-item-content{width:100%;height:40px;margin-top:5px;padding:10px;overflow:hidden;white-space:nowrap;resize:none;border-radius:3px;color:#ccc;line-height:1.5}.a-item span,.s-item span{display:inline-block;margin-left:10px;color:#FFF;font-weight:bold;background-color:#9e2f5e;padding:5px 20px;border-radius:2px;margin-top:5px;cursor:pointer}.s-item{padding:30px;border:1px solid #EEE;margin-bottom:20px}.a-item span:hover,.s-item span:hover{background-color:#242135}.a-active{background-color:#FFF;color:#242135;border:1px solid #9e2f5e}textarea.a-item-content.a-active{background-color:#FFF;height:140px;white-space:normal;overflow:visible;color:#242135}.accordion-generated,.slide-generated,.code-generated{background-color:#fff;border-radius:10px;width:100%;height:150px;resize:none;border:1px solid #eee;cursor:text;direction:ltr;padding:20px;overflow:hidden;font-family:cursive;color:#999}.accordion-generate,.slide-generate,.code-generate{background-color:#9e2f5e;display:block;margin:10px auto;padding:10px 20px;border-radius:3px;color:#FFF;font-weight:bold;font-size:18px;width:120px;text-align:center;cursor:pointer}.accordion-generate:hover,.slide-generate:hover,.code-generate:hover{background-color:#242135}.slide-g h3{width:100px}.slide-g select{padding:5px 2px}.slide-g .normal-input{width:460px}.s-slice{font-family:cursive;display:none}.slice-h3{display:none}.s-item-title,.s-item-link,.s-item-image{width:100%}.s-priv{width:auto!important}.s-active{border:1px solid #9e2f5e}.normal-input.code-content{width:100%;direction:ltr;height:250px;font-family:cursive}.m-title{width:460px}</style>
+</head>
+<body>
+<div class=msgs-container>
+<h2>الرسائل</h2>
+<h3>نص الرسالة</h3>
+<input type=text class='m-title normal-input'>
+<br><br>
+<h3>نوع الرسالة</h3>
+<select class=m-type>
+<option value=success>نجاح</option>
+<option value=error>خطأ</option>
+<option value=warning>تحذير</option>
+<option value=info>معلومات</option>
+<option value=gift>هديه</option>
+</select>
+<br><br>
+<span class=msgs-generate>توليد الكود</span>
+<input type=text class=msgs-code readonly=readonly>
+</div>
+<div class=bottons-container>
+<h2>الأزرار</h2>
+<h3>محتوى الزر</h3>
+<input type=text class='b-title normal-input'>
+<h3>رابط الزر</h3>
+<input type=text class='b-url normal-input'>
+<i class=clear></i>
+<br>
+<h3>لون الخلفية</h3>
+<div class=color-select><input type=color class='b-background normal-color' value=#9e2f5e></div>
+<h3>لون النص</h3>
+<div class=color-select><input type=color class='b-color normal-color' value=#242135></div>
+<i class=clear></i>
+<br>
+<h3>نوع الزر</h3>
+<select class=b-type>
+<option value=SqDown>زر تحميل</option>
+<option value=SqPrev>زر استعراض</option>
+</select>
+<h3>حجم الزر</h3>
+<select class=b-size>
+<option value=sm>صغير</option>
+<option value=md>متوسط</option>
+<option value=lg>كبير</option>
+<option value=xl>كبير جداً</option>
+</select>
+<h3>يفتح في</h3>
+<select class=b-target>
+<option value=_self>نفس الصفحة</option>
+<option value=_blank>صفحة جديدة</option>
+</select>
+<br><br>
+<span class=buttons-generate>توليد الكود</span>
+<input type=text class=buttons-code readonly=readonly>
+</div>
+<div class=accordion-container>
+<h2>أكورديون</h2>
+<div class=acc-g>
+<h4><b>1</b>أضف المحتوى</h4>
+<h3>العنوان</h3>
+<input type=text class='a-title normal-input'>
+<br>
+<h3>المحتوى</h3>
+<textarea class='a-content normal-input'></textarea>
+<br>
+<span class=accordion-add>إضافة</span>
+</div>
+<div class=acc-d><h4><b>2</b>قم بالتعديل أو الحذف</h4></div>
+<div class=acc-b>
+<h4><b>3</b>قم بتوليد الأكواد</h4>
+<textarea class=accordion-generated placeholder='قم بنسخ الكود بعد توليده' readonly=readonly></textarea>
+<span class=accordion-generate>توليد الكود</span>
+</div>
+<i class=clear></i>
+</div>
+<!--<div class=slider-container>
+<h2>سلايدر</h2>
+<div class=slide-g>
+<h4><b>1</b>أضف المحتوى</h4>
+<h3>الشرائح</h3>
+<select class=s-type>
+<option value=slider-cover>شريحة واحدة</option>
+<option value=slider-carousel>عدة شرائح</option>
+</select>
+<h3 class=s-priv>تشغيل تلقائي</h3>
+<select class=s-autoplay>
+<option value=true>نعم</option>
+<option value=false>لا</option>
+</select>
+<h3 class='s-prive slice-h3'>عدد الشرائح</h3>
+<select class=s-slice>
+<option value=2>2</option>
+<option value=3 selected=selected>3</option>
+<option value=4>4</option>
+</select>
+<br><br>
+<h3>العنوان</h3>
+<input type=text class='s-title normal-input'>
+<br><br>
+<h3>الرابط</h3>
+<input type=text class='s-link normal-input'>
+<br><br>
+<h3>رابط الصورة</h3>
+<input type=text class='s-image normal-input'>
+<br><br>
+<span class=slide-add>إضافة</span>
+</div>
+<div class=slide-d><h4><b>2</b>قم بالتعديل أو الحذف</h4></div>
+<div class=slide-b>
+<h4><b>3</b>قم بتوليد الأكواد</h4>
+<textarea class=slide-generated placeholder='قم بنسخ الكود بعد توليده' readonly=readonly></textarea>
+<span class=slide-generate>توليد الكود</span>
+</div>
+</div>-->
+<div class=slider-container>
+<h2>الأكواد البرمجية</h2>
+<!--<h3>نوع الكود</h3>
+<select class=code-type>
+<option value=HTML>HTML</option>
+<option value=CSS>CSS</option>
+<option value=JAVASCRIPT>Javascript</option>
+<option value=CODE>Other</option>
+</select>--><br><br>
+<textarea placeholder='الصق أكوادك هنا' class='normal-input code-content'></textarea>
+<span class=code-generate>توليد الكود</span>
+<textarea class=code-generated placeholder='قم بنسخ الكود بعد توليده' readonly=readonly></textarea>
+</div>
+<script src=assets/jquery-1.11.2.min.js></script>
+<script>
+$(function () {
+    $(".msgs-generate").click(function () {
+        var b = $(".m-type").val();
+        var c = $(".m-title").val();
+        var a = "<i class='msgs " + b + "'>" + c + "</i>";
+        $(".msgs-code").val(a)
+    });
+    $(".buttons-generate").click(function () {
+        var d = $(".b-type").val();
+        var e = $(".b-title").val();
+        var h = $(".b-url").val();
+        var g = $(".b-color").val();
+        var a = $(".b-background").val();
+        var b = $(".b-size").val();
+        var f = $(".b-target").val();
+        var c = "<a title='" + e + "' class='sq-button " + b + " " + d + "' href='" + h + "' style='background:" + a + ";color:" + g + "' target='" + f + "'>" + e + "</a>";
+        $(".buttons-code").val(c)
+    });
+    $(".accordion-add").click(function () {
+        var b = $(".a-title").val();
+        var a = $(".a-content").val();
+        var c = "<div class='a-item'><input placeholder='العنوان' type='text' class='a-item-title' value='" + b + "' readonly='readonly'><textarea placeholder='المحتوى' class='a-item-content' readonly='readonly'>" + a + "</textarea><span class='a-edit'>تعديل</span><span class='a-delete'>حذف</span></div>";
+        $(".a-content,.a-title").val("");
+        $(".acc-d").append(c)
+    });
+    $(".acc-d").on("click", ".a-delete", function () {
+        $(this).parent().remove()
+    });
+    $(".acc-d").on("click", ".a-edit", function () {
+        $(this).siblings("input,textarea").removeAttr("readonly").addClass("a-active");
+        $(this).after("<span class='a-save'>حفظ</span>");
+        $(this).remove()
+    });
+    $(".acc-d").on("click", ".a-save", function () {
+        $(this).siblings("input,textarea").attr("readonly", true).removeClass("a-active");
+        $(this).after("<span class='a-edit'>تعديل</span>");
+        $(this).remove()
+    });
+    $(".accordion-generate").click(function () {
+        var e = $(".a-item");
+        var d = '\n\n<!-- Accordion Start -->\n<div class="accordion">\n';
+        for (var c = 0; c < e.length; c++) {
+            var b = $(e[c]).find(".a-item-title").val();
+            var a = $(e[c]).find(".a-item-content").val();
+            if (c === 0) {
+                d += "<div class='opened acc-head'>" + b + "</div>\n<div class='acc-body notr'>" + a + "</div> \n"
+            } else {
+                d += "<div class='acc-head'>" + b + "</div>\n<div class='acc-body notr'>" + a + "</div> \n"
+            }
+        }
+        d += "</div>\n<!-- Accordion End -->\n\n";
+        $(".accordion-generated").html(d)
+    });
+    $(".accordion-generated,.buttons-code,.slide-generated,.code-generated").click(function () {
+        $(this).select();
+        $(this).scrollTop(10000)
+    });
+    $(".s-type").change(function () {
+        if ($(this).val() == "slider-carousel") {
+            $(".slice-h3,.s-slice").fadeIn(0)
+        } else {
+            $(".slice-h3,.s-slice").fadeOut(0)
+        }
+    });
+    $(".slide-add").click(function () {
+        var c = $(".s-title").val();
+        var b = $(".s-link").val();
+        var a = $(".s-image").val();
+        var d = "<div class='s-item'><input placeholder='العنوان' type='text' class='normal-input s-item-title' value='" + c + "' readonly='readonly'><br><br><input type='text' placeholder='الرابط' class='normal-input s-item-link' value='" + b + "' readonly='readonly'><br><br><input type='text' value='" + a + "' placeholder='رابط الصورة' class='normal-input s-item-image' readonly='readonly'><br><br><span class='s-edit'>تعديل</span><span class='s-delete'>حذف</span></div>";
+        $(".s-title,.s-link,.s-image").val("");
+        $(".slide-d").append(d)
+    });
+    $(".slide-d").on("click", ".s-delete", function () {
+        $(this).parent().remove()
+    });
+    $(".slide-d").on("click", ".s-edit", function () {
+        $(this).siblings("input").removeAttr("readonly").addClass("s-active");
+        $(this).after("<span class='s-save'>حفظ</span>");
+        $(this).remove()
+    });
+    $(".slide-d").on("click", ".s-save", function () {
+        $(this).siblings("input,textarea").attr("readonly", "readonly").removeClass("s-active");
+        $(this).after("<span class='s-edit'>تعديل</span>");
+        $(this).remove()
+    });
+    $(".slide-generate").click(function () {
+        var j = $(".s-item");
+        var a = $(".s-type").val();
+        var h = $(".s-slice").val();
+        var d = $(".s-autoplay").val();
+        var e = "\n\n<!-- Slider Start -->\n";
+        if (a == "slider-cover") {
+            e += '<div class="slider owl-carousel owl-theme ' + a + '" data-autoplay="' + d + '">\n'
+        } else {
+            e += '<div class="slider owl-carousel owl-theme ' + a + '" data-items="' + h + '" data-autoplay="' + d + '">\n'
+        }
+        for (var f = 0; f < j.length; f++) {
+            var g = $(j[f]).find(".s-item-title").val();
+            var c = $(j[f]).find(".s-item-link").val();
+            var b = $(j[f]).find(".s-item-image").val();
+            if (c.length !== 0) {
+                e += "<a title='" + g + "' href='" + c + "'><img src='" + b + "' title='" + g + "' alt='" + g + "'></a>\n"
+            } else {
+                e += "<div title='" + g + "'><img src='" + b + "' title='" + g + "' alt='" + g + "'></div>\n"
+            }
+        }
+        e += "</div>\n<!-- Slider End -->\n\n";
+        $(".slide-generated").html(e)
+    });
+    $(".code-generate").click(function () {
+        var b = $(".code-type").val();
+        var c = $(".code-content").val();
+        var d = c;
+        d = d.replace(/\</gi, "&lt;").replace(/\>/gi, "&gt;");
+        d = d.replace(/^/gm, "").replace(/$/gm, "");
+        var a = "\n<!-- Start Program Code -->\n";
+        a += "";
+        a += "<pre class='sq-code'>\n" + d + "\n</pre>\n";
+        a += "";
+        $(".code-generated").val(a)
+    })
+});
+</script>
+</body>
+</html>
